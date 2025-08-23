@@ -1,0 +1,51 @@
+id,statement,label,source,language,category
+N001,"Nepal government allocates Rs 1647 billion budget for fiscal year 2081/82 with focus on infrastructure development and education sector",Real,government_website,English,budget
+N002,"Ministry of Education announces revised School Sector Development Plan with new teacher qualification requirements starting from academic year 2081",Real,ministry_document,English,education
+N003,"Department of Agriculture launches subsidized fertilizer distribution program for registered farmers with 50% discount on DAP fertilizer",Real,department_notice,English,agriculture
+N004,"Ministry of Finance releases guidelines for digital payment system implementation across all government offices by end of fiscal year",Real,government_website,English,digital_governance
+N005,"Nepal Law Commission publishes updated legal framework for cyber crime prevention and digital security measures",Real,legal_document,English,cybersecurity
+N006,"URGENT! Government of Nepal announces immediate Rs 25000 cash relief for ALL citizens! No paperwork needed! Send citizenship number to 98765-43210",Fake,whatsapp_forward,English,financial_scam
+N007,"Breaking News! Ministry of Education will give FREE laptops to all students who share this message 100 times on WhatsApp! Hurry up only 48 hours left!",Fake,social_media,English,education_scam
+N008,"Secret policy leaked! All taxes cancelled for next 6 months due to economic crisis! Share immediately before government deletes this information!",Fake,fake_news_site,English,tax_scam
+N009,"Amazing announcement from Nepal Telecom! Free WiFi for all citizens who forward this message to 20 contacts! Limited time offer expires today!",Fake,social_media,English,telecom_scam
+N010,"Shocking! Prime Minister announces Rs 1 lakh for every household affected by COVID! Just click this link and register: bit.ly/nepal-covid-relief",Fake,social_media,English,covid_scam
+N011,"Nepal Cricket Team defeats Malaysia by 6 wickets in ACC Men's Premier Cup held in Oman yesterday with captain Rohit Paudel scoring 89 not out",NotPolicy,sports_news,English,sports
+N012,"Heavy rainfall expected to continue for next 3 days across central and eastern regions according to Department of Hydrology and Meteorology",NotPolicy,weather_report,English,weather
+N013,"New shopping mall opens in Durbar Marg featuring international brands and food court with capacity for 500 customers",NotPolicy,business_news,English,business
+N014,"Famous Bollywood actor Shah Rukh Khan spotted at Tribhuvan International Airport for upcoming movie shooting in Kathmandu valley",NotPolicy,entertainment_news,English,entertainment
+N015,"Traffic police implements new digital challan system in Kathmandu valley to reduce congestion and improve road safety measures",NotPolicy,traffic_news,English,traffic
+N016,"सरकारले आगामी आर्थिक वर्ष २०८१/८२ मा शिक्षा क्षेत्रमा रु १५ प्रतिशत बजेट विनियोजन गर्ने निर्णय गरेको छ",Real,government_website,Nepali,education
+N017,"स्वास्थ्य तथा जनसंख्या मन्त्रालयले कोभिड-१९ विरुद्धको खोप अभियान आगामी महिनादेखि सुरु गर्ने घोषणा गरेको छ",Real,ministry_document,Nepali,health
+N018,"कृषि तथा पशुपंक्षी विकास मन्त्रालयले किसानहरूलाई अनुदानमा बीउ वितरण कार्यक्रम सञ्चालन गर्ने जनाएको छ",Real,department_notice,Nepali,agriculture
+N019,"तत्काल! सरकारले सबै नागरिकलाई रु २५ हजार नगद सहायता दिने निर्णय गरेको छ! नागरिकता नम्बर पठाउनुहोस् ९८७६५-४३२१०",Fake,whatsapp_forward,Nepali,financial_scam
+N020,"शिक्षा मन्त्रालयले सबै विद्यार्थीलाई निःशुल्क ल्यापटप दिने घोषणा गरेको छ! यो सन्देश १०० जनालाई पठाउनुहोस्!",Fake,social_media,Nepali,education_scam
+N021,"नेपाल क्रिकेट टोलीले मलेसियालाई ६ विकेटले पराजित गर्दै एसीसी प्रिमियर कपमा विजयी सुरुवात गरेको छ",NotPolicy,sports_news,Nepali,sports
+N022,"काठमाडौं उपत्यकामा आगामी ३ दिन भारी वर्षाको सम्भावना रहेको मौसम पूर्वानुमान महिशाखाले जनाएको छ",NotPolicy,weather_report,Nepali,weather
+N023,"Ministry of Foreign Affairs announces new visa policy for tourists visiting Nepal during Visit Nepal 2024 campaign with simplified procedures",Real,government_website,English,tourism
+N024,"National Planning Commission releases 16th periodic development plan focusing on economic growth and poverty reduction strategies",Real,planning_document,English,development
+N025,"Department of Roads announces completion of Melamchi-Kathmandu tunnel project reducing travel time by 2 hours for residents",Real,infrastructure_news,English,infrastructure
+N026,"Fake alert! Nepal Rastra Bank will freeze all bank accounts tomorrow! Withdraw your money immediately! Share this urgent message to save others!",Fake,social_media,English,banking_scam
+N027,"Government secretly planning to ban all social media platforms next month! VPN will be illegal! Share before this gets deleted!",Fake,fake_news_site,English,social_media_scam
+N028,"Exclusive offer from Nepal Electricity Authority! Free electricity for 6 months for customers who forward this to 50 contacts!",Fake,social_media,English,utility_scam
+N029,"Local artist wins international painting competition representing Nepal at UNESCO cultural festival held in Paris last week",NotPolicy,arts_news,English,arts
+N030,"Kathmandu Metropolitan City launches new waste management system with color-coded bins for effective segregation across all wards",NotPolicy,municipal_news,English,municipal
+N031,"प्रधानमन्त्री रोजगार कार्यक्रमअन्तर्गत ५० हजार युवाहरूलाई रोजगारी प्रदान गर्ने सरकारको घोषणा",Real,government_website,Nepali,employment
+N032,"गृह मन्त्रालयले नयाँ पासपोर्ट वितरण नीति घोषणा गर्दै अनलाइन आवेदन प्रक्रिया सुरु गरेको छ",Real,ministry_document,Nepali,passport
+N033,"खतरनाक! सरकारले सबै बैंक खाता बन्द गर्ने निर्णय गरेको छ! तुरुन्त पैसा निकाल्नुहोस्! यो सन्देश सबैलाई पठाउनुहोस्!",Fake,whatsapp_forward,Nepali,banking_scam
+N034,"गोप्य जानकारी! सरकारले फेसबुक र ह्वाट्सएप प्रतिबन्ध गर्ने तयारी गरिरहेको छ! यो मेसेज डिलिट हुनु अघि सेयर गर्नुहोस्!",Fake,social_media,Nepali,social_media_scam
+N035,"प्रसिद्ध गायक नारायण गोपालको नयाँ गीत रिलिज भएको छ जुन युट्यूबमा लाखौं भ्यू पाएको छ",NotPolicy,entertainment_news,Nepali,entertainment
+N036,"हिमालयन बैंकले नयाँ डिजिटल बैंकिङ सेवा सुरु गर्दै ग्राहकहरूलाई २४ घण्टा सेवा प्रदान गर्ने घोषणा गरेको छ",NotPolicy,banking_news,Nepali,banking
+N037,"Office of Prime Minister and Council of Ministers releases annual progress report showing 85% completion of infrastructure projects",Real,government_report,English,infrastructure
+N038,"Supreme Court of Nepal issues new guidelines for fast-track courts to reduce case backlog and improve justice delivery system",Real,judicial_document,English,judiciary
+N039,"Ministry of Culture Tourism and Civil Aviation announces heritage site restoration project with UNESCO funding worth 50 million dollars",Real,ministry_announcement,English,heritage
+N040,"Breaking fake news! All students will get 100% scholarship if they don't attend school tomorrow! Ministry of Education confirms this policy!",Fake,fake_news_site,English,education_scam
+N041,"Government will pay Rs 1000 per day to everyone who stays home during lockdown! Register by calling 16600! Offer valid till midnight!",Fake,social_media,English,covid_scam
+N042,"Nepal Police arrests international drug smuggling ring with 50 kg heroin seized at Tribhuvan International Airport during routine checking",NotPolicy,crime_news,English,crime
+N043,"Everest Bank launches new mobile banking app with enhanced security features and user-friendly interface for all customers",NotPolicy,financial_news,English,banking
+N044,"Famous chef Gordon Ramsay visits Kathmandu to explore Nepali cuisine for his upcoming documentary on Asian food culture",NotPolicy,celebrity_news,English,food
+N045,"कानुन न्याय तथा संसदीय मामिला मन्त्रालयले नयाँ कानुनी ढाँचा तयार गरी संसदमा पेश गर्ने तयारी गरेको छ",Real,legal_document,Nepali,legal
+N046,"अर्थ मन्त्रालयले कर छुटको नयाँ नीति ल्याउने घोषणा गर्दै साना उद्योगीहरूलाई प्राथमिकता दिने जनाएको छ",Real,ministry_policy,Nepali,tax_policy
+N047,"झुटो खबर! सरकारले भोलिदेखि सबै पसल बन्द गर्ने आदेश दिएको छ! यो सन्देश सबै व्यापारीहरूलाई पठाउनुहोस्!",Fake,whatsapp_forward,Nepali,business_scam
+N048,"चौंकाउने! प्रधानमन्त्रीले राजीनामा दिने घोषणा गरेको छ! यो गोप्य समाचार मिडियामा आउनु अघि नै सेयर गर्नुहोस्!",Fake,fake_news_site,Nepali,political_scam
+N049,"नेपाली फुटबल टोलीले साफ च्याम्पियनशिपमा भारतलाई २-१ ले पराजित गर्दै इतिहास रच्यो",NotPolicy,sports_news,Nepali,sports
+N050,"काठमाडौंको नयाँ बसपार्कमा आधुनिक सुविधासहित यात्रु सेवा सुरु भएको छ",NotPolicy,transport_news,Nepali,transport
