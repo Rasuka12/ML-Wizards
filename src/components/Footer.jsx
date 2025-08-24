@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="p-2 bg-gradient-to-br from-blue-500 to-red-500 rounded-xl shadow-lg">
                 <Shield className="h-6 w-6 text-white" />
               </div>
-              <span className="font-bold text-gray-800 text-lg">Nepal Policy Detector</span>
+              <span className="font-bold text-gray-800 text-lg">Lawgical</span>
             </div>
             <p className="text-gray-600 leading-relaxed">
               AI-powered tool for verifying government policy authenticity in Nepal.
@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t-2 border-gradient-to-r from-blue-200 to-red-200">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
             <div className="flex items-center space-x-4 text-sm text-gray-600">
-              <span className="font-semibold">© 2025 Nepal Policy Detector</span>
+              <span className="font-semibold">© 2025 Lawgical</span>
               <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
               <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-red-100 rounded-full font-medium">Hackathon Project</span>
             </div>

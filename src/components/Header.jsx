@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-lg">
-                Nepal Policy Detector
+                Lawgical
               </h1>
               <p className="text-sm text-blue-100 font-medium">
                 Verify authenticity of government policies

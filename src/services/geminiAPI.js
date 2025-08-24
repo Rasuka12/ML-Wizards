@@ -2,12 +2,18 @@
  * Gemini API service for advanced news search and verification
  */
 
-const GEMINI_API_KEY = 'AIzaSyABWWWqHWa0TSAz6HpotXVxE8g9dv5EIEw';
+// Environment variables (Vite requires VITE_ prefix for client-side access)
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
-// Google Custom Search API (optional - would need separate API key)
-const GOOGLE_SEARCH_API_KEY = null; // User would need to provide this
-const GOOGLE_SEARCH_ENGINE_ID = null; // User would need to provide this
+// Google Custom Search API (optional - currently not implemented)
+const GOOGLE_SEARCH_API_KEY = import.meta.env.VITE_GOOGLE_SEARCH_API_KEY || null;
+const GOOGLE_SEARCH_ENGINE_ID = import.meta.env.VITE_GOOGLE_SEARCH_ENGINE_ID || null;
+
+// Validate required environment variables
+if (!GEMINI_API_KEY) {
+  console.error('⚠️  VITE_GEMINI_API_KEY is not set in environment variables');
+}
 
 /**
  * @typedef {Object} NewsSource
@@ -100,10 +106,11 @@ TASK: Create specific search strategies and provide detailed guidance for findin
 4. **Context**: Background about this policy area
 5. **Red Flags**: Warning signs to watch for
 
-IMPORTANT: Do not provide generic homepage URLs. Instead, provide:
+IMPORTANT: Do not provide generic homepage URLs or placeholder text like "To be determined". Instead, provide:
 - Specific search queries that users can copy-paste into Google/news sites
 - Detailed search instructions for finding relevant articles
 - Exact verification steps with specific websites to check
+- Always provide actual working URLs (like https://www.mof.gov.np for Ministry of Finance)
 
 Please format your response as JSON with the following structure:
 {
@@ -132,6 +139,15 @@ Please format your response as JSON with the following structure:
       "domain": "nepal.gov.np",
       "summary": "Search their announcements section for official policy publications",
       "searchTips": "Check 'Latest News' and 'Notices' sections",
+      "relevance": "High",
+      "credibility": "Official Government Source"
+    },
+    {
+      "title": "Ministry of Finance, Nepal",
+      "url": "https://www.mof.gov.np",
+      "domain": "mof.gov.np",
+      "summary": "Official source for budget, financial policies, and economic announcements",
+      "searchTips": "Check Press Releases, Budget Documents, and Policy sections",
       "relevance": "High",
       "credibility": "Official Government Source"
     }
@@ -204,24 +220,22 @@ Focus on actionable search strategies rather than direct links, since news artic
     console.log('DEBUG - searchQuery:', searchQuery);
     console.log('DEBUG - originalText:', originalText);
     
-    // Use the actual policy text headline/content directly for searches
-    // Prioritize originalText, but fall back to searchQuery if originalText is empty
+    // Use the actual policy text but keep it shorter for better search results
     let dynamicQuery = '';
     
     if (originalText && originalText.trim().length > 0) {
       dynamicQuery = originalText.trim();
       
-      // If text is too long, use first sentence or first 100 characters
-      if (dynamicQuery.length > 100) {
+      // If text is too long, use first sentence or first 50 characters for better search results
+      if (dynamicQuery.length > 50) {
         const firstSentence = dynamicQuery.split(/[.!?]/)[0];
-        if (firstSentence.length > 0 && firstSentence.length <= 150) {
+        if (firstSentence.length > 0 && firstSentence.length <= 60) {
           dynamicQuery = firstSentence.trim();
         } else {
-          dynamicQuery = dynamicQuery.substring(0, 100).trim();
+          dynamicQuery = dynamicQuery.substring(0, 50).trim();
         }
       }
     } else if (searchQuery && searchQuery.trim().length > 0) {
-      // Fall back to searchQuery if originalText is not available
       dynamicQuery = searchQuery.trim();
     } else {
       // Final fallback
@@ -234,17 +248,23 @@ Focus on actionable search strategies rather than direct links, since news artic
     console.log('Final dynamic query being used:', dynamicQuery);
     
     const encodedQuery = encodeURIComponent(dynamicQuery);
-    const encodedNewsQuery = encodeURIComponent(`"${dynamicQuery}" Nepal`);
+    const encodedNewsQuery = encodeURIComponent(`${dynamicQuery} Nepal`);
     
     // Truncate description if too long for display
     const shortDescription = dynamicQuery.length > 60 ? dynamicQuery.substring(0, 60) + '...' : dynamicQuery;
     
     return [
       {
+        title: "Google Search",
+        url: `https://www.google.com/search?q=${encodedQuery}`,
+        description: `Search Google: ${shortDescription}`,
+        icon: "🔍"
+      },
+      {
         title: "Google News Search",
         url: `https://news.google.com/search?q=${encodedNewsQuery}&hl=en-US&gl=US&ceid=US:en`,
-        description: `Search for: ${shortDescription}`,
-        icon: "🔍"
+        description: `Search news: ${shortDescription}`,
+        icon: "📰"
       },
       {
         title: "Kathmandu Post Search", 
@@ -259,14 +279,8 @@ Focus on actionable search strategies rather than direct links, since news artic
         icon: "📰"
       },
       {
-        title: "Google Search (Trusted Sources)",
-        url: `https://www.google.com/search?q=${encodeURIComponent(`"${dynamicQuery}" site:opmcm.gov.np OR site:kathmandupost.com OR site:myrepublica.nagariknetwork.com`)}`,
-        description: `Search trusted sources: ${shortDescription}`,
-        icon: "🎯"
-      },
-      {
-        title: "YouTube Official Search",
-        url: `https://www.youtube.com/results?search_query=${encodeURIComponent(`"${dynamicQuery}" Nepal government`)}`,
+        title: "YouTube Search",
+        url: `https://www.youtube.com/results?search_query=${encodedQuery}`,
         description: `Search YouTube: ${shortDescription}`,
         icon: "📺"
       }
@@ -349,6 +363,15 @@ Focus on actionable search strategies rather than direct links, since news artic
         domain: 'opmcm.gov.np',
         summary: 'Official announcements and policy decisions from PM office',
         searchTips: 'Check Press Releases, Statements, and Government Decisions sections',
+        relevance: 'High',
+        credibility: 'Official Government Source'
+      },
+      {
+        title: 'Ministry of Finance, Nepal',
+        url: 'https://www.mof.gov.np',
+        domain: 'mof.gov.np',
+        summary: 'Official source for budget, financial policies, and economic announcements',
+        searchTips: 'Check Press Releases, Budget Documents, and Policy sections for financial information',
         relevance: 'High',
         credibility: 'Official Government Source'
       },
